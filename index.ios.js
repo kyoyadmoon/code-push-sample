@@ -12,7 +12,9 @@ import {
   View
 } from 'react-native';
 
-export default class CodePush_Prac extends Component {
+import codePush from "react-native-code-push";
+
+class CodePush_Prac extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -36,7 +38,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: 'pink',
   },
   welcome: {
     fontSize: 20,
@@ -49,5 +51,9 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+
+CodePush_Prac = codePush(CodePush_Prac);
+
+export default CodePush_Prac;
 
 AppRegistry.registerComponent('CodePush_Prac', () => CodePush_Prac);
